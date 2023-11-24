@@ -96,7 +96,22 @@ namespace ExamenUnidad3_Cesar.Clases
         }
 
 
-        
+        public Nodo BuscarElemento(string elemento)
+        {
+            Nodo actual = Primero;
+
+            while (actual != null)
+            {
+                if (actual.Dato == elemento)
+                {
+                    return actual; // Se encontró el elemento, devolver el nodo actual
+                }
+
+                actual = actual.Siguiente;
+            }
+
+            return null; // No se encontró el elemento en la lista 
+        }
 
 
     }
